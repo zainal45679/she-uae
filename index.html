@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SHE — Women-led event management in the UAE. Professional gatherings, leadership forums, and corporate experiences created for and by women.">
+  <title>SHE | Women-Led Event Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("she-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner container container--inset">
+      <a href="#banner" class="logo" aria-label="SHE home">
+        <span class="logo-mark">SHE</span>
+        <span class="logo-tagline">Women-Led Events</span>
+      </a>
+      <div class="header-end">
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="#what-we-do">What We Do</a></li>
+            <li><a href="#upcoming-events">Events</a></li>
+            <li><a href="#connect-she">Connect</a></li>
+            <li><a href="#she-highlights">Highlights</a></li>
+            <li><a href="tel:+971501234567" class="nav-call" data-phone-link>Call Us</a></li>
+            <li><a href="#connect-she" class="nav-cta">Get in Touch</a></li>
+          </ul>
+        </nav>
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+          title="Toggle theme"
+        >
+          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. Home Page -->
+    <div class="home-page" id="home">
+
+      <!-- 1.1 Banner -->
+      <section class="banner section section--flush" id="banner" aria-labelledby="banner-heading">
+        <div class="banner-visual" aria-hidden="true">
+          <img class="banner-image" src="assets/images/women.png" alt="" width="1920" height="1080" loading="eager">
+          <div class="banner-overlay"></div>
+        </div>
+        <div class="banner-panel">
+          <div class="banner-content container container--inset reveal reveal--hero">
+            <p class="banner-eyebrow">Women-led · UAE</p>
+            <h1 id="banner-heading">Spaces where women lead, connect, and grow</h1>
+            <p class="banner-lead banner-lead--desktop">SHE is a women-led event studio designing professional gatherings, leadership forums, and corporate experiences with women at the centre.</p>
+            <p class="banner-lead banner-lead--mobile">Women-led events and professional gatherings across the Emirates.</p>
+            <div class="banner-actions">
+              <a href="#upcoming-events" class="btn btn-primary">Explore Events</a>
+              <a href="tel:+971501234567" class="btn btn-call" data-phone-link>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                Call Us
+              </a>
+              <a href="#connect-she" class="btn btn-secondary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1.2 What We Do -->
+      <section class="what-we-do section section--curved-top" id="what-we-do" aria-labelledby="what-we-do-heading">
+        <div class="section-curve section-curve--wave" aria-hidden="true" data-curve-fill="warm"></div>
+        <div class="container container--inset">
+          <header class="section-header reveal">
+            <p class="section-eyebrow">What We Do</p>
+            <h2 id="what-we-do-heading">Event management for women in business</h2>
+            <p class="section-intro">We create environments where women professionals lead conversations, build networks, and advance together — from intimate roundtables to large-scale corporate forums.</p>
+          </header>
+          <div class="services-grid reveal-stagger">
+            <article class="service-card">
+              <span class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M8 4v2M16 4v2"/></svg>
+              </span>
+              <h3>Corporate Events</h3>
+              <p>Company gatherings and executive forums with programming that elevates women's leadership and voices in the room.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M4 18c0-2.2 1.8-4 4-4s4 1.8 4 4M12 18c0-2.2 1.8-4 4-4s4 1.8 4 4"/></svg>
+              </span>
+              <h3>Networking Sessions</h3>
+              <p>Curated circles where women professionals exchange ideas, referrals, and opportunities across industries.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M12 3l2.4 4.8L20 9l-4 3.9.9 5.6L12 16.5 7.1 18.5 8 12.9 4 9l5.6-1.2L12 3z"/></svg>
+              </span>
+              <h3>Brand Collaborations</h3>
+              <p>Co-branded activations with organisations committed to supporting women through thoughtful, high-quality events.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M4 19h16M6 16V8M10 16V5M14 16v-6M18 16v-3"/></svg>
+              </span>
+              <h3>Professional Gatherings</h3>
+              <p>Workshops, mentorship sessions, and roundtables for women navigating career growth across the Emirates.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1.3 Upcoming Events -->
+      <section class="upcoming-events section section--curved-top" id="upcoming-events" aria-labelledby="upcoming-events-heading">
+        <div class="section-curve section-curve--wave section-curve--flip" aria-hidden="true" data-curve-fill="default"></div>
+        <div class="container container--inset">
+          <header class="section-header reveal">
+            <p class="section-eyebrow">Upcoming Events</p>
+            <h2 id="upcoming-events-heading">Gatherings for women professionals</h2>
+            <p class="section-intro">Join our upcoming forums, networking evenings, and leadership sessions across Dubai and Abu Dhabi.</p>
+          </header>
+          <div class="events-grid reveal-stagger" id="events-grid" role="list" aria-live="polite">
+            <!-- Event cards rendered by script.js -->
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /.home-page -->
+
+    <!-- 2. Connect SHE -->
+    <section class="connect-she section section--curved-top" id="connect-she" aria-labelledby="connect-she-heading">
+      <div class="section-curve section-curve--wave" aria-hidden="true" data-curve-fill="muted"></div>
+      <div class="container container--inset">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Connect SHE</p>
+          <h2 id="connect-she-heading">Work with our women-led team</h2>
+          <p class="section-intro connect-callout reveal">
+            Prefer to speak with us directly?
+            <a href="tel:+971501234567" class="inline-call" data-phone-link data-phone-display>+971 50 123 4567</a>
+          </p>
+        </header>
+
+        <div class="connect-grid reveal-stagger">
+          <!-- 2.1 Booking Form -->
+          <div class="subsection booking-form-block" id="booking-form-section">
+            <h3 class="subsection-title">Booking Form</h3>
+            <p class="subsection-intro">Plan your next women-focused event. We respond within two business days.</p>
+            <form class="booking-form" id="booking-form" action="/api/bookings" method="post" novalidate>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="booking-name">Full name</label>
+                  <input type="text" id="booking-name" name="fullName" required autocomplete="name" placeholder="Your name">
+                </div>
+                <div class="form-field">
+                  <label for="booking-email">Email</label>
+                  <input type="email" id="booking-email" name="email" required autocomplete="email" placeholder="you@company.ae">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="booking-company">Company</label>
+                  <input type="text" id="booking-company" name="company" autocomplete="organization" placeholder="Organisation name">
+                </div>
+                <div class="form-field">
+                  <label for="booking-type">Event type</label>
+                  <select id="booking-type" name="eventType" required>
+                    <option value="" disabled selected>Select type</option>
+                    <option value="leadership">Women's Leadership Forum</option>
+                    <option value="corporate">Corporate Event</option>
+                    <option value="networking">Women's Networking Session</option>
+                    <option value="brand">Brand Collaboration</option>
+                    <option value="gathering">Professional Gathering</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="booking-date">Preferred date</label>
+                <input type="date" id="booking-date" name="preferredDate">
+              </div>
+              <div class="form-field">
+                <label for="booking-message">Event details</label>
+                <textarea id="booking-message" name="message" rows="4" required placeholder="Brief overview of your event requirements"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit enquiry</button>
+              <p class="form-feedback" id="booking-feedback" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <!-- 2.2 Participate with SHE -->
+          <aside class="subsection participate-block" id="participate-she" aria-labelledby="participate-heading">
+            <h3 class="subsection-title" id="participate-heading">Participate with SHE</h3>
+            <p class="subsection-intro">Contribute as a speaker, sponsor, or partner shaping professional events for women in the UAE.</p>
+            <ul class="participate-list">
+              <li>
+                <strong>Women Speakers</strong>
+                <span>Lead panels, keynotes, and mentorship sessions at SHE forums.</span>
+              </li>
+              <li>
+                <strong>Sponsors</strong>
+                <span>Support programming that puts women's leadership and professional growth first.</span>
+              </li>
+              <li>
+                <strong>Partners</strong>
+                <span>Collaborate with a women-led team on venues, production, and hospitality.</span>
+              </li>
+            </ul>
+            <div class="participate-actions">
+              <a href="tel:+971501234567" class="btn btn-call" data-phone-link>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                Call Us
+              </a>
+              <a href="mailto:hello@sheevents.ae" class="btn btn-outline">hello@sheevents.ae</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SHE Highlights -->
+    <section class="she-highlights section section--curved-top" id="she-highlights" aria-labelledby="she-highlights-heading">
+      <div class="section-curve section-curve--wave section-curve--flip" aria-hidden="true" data-curve-fill="warm"></div>
+      <div class="container container--inset">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">SHE Highlights</p>
+          <h2 id="she-highlights-heading">Women at the heart of every room</h2>
+        </header>
+
+        <div class="highlights-split reveal-stagger">
+          <div class="highlights-col highlights-col--photos" id="photos">
+            <h3 class="subsection-title">Photos</h3>
+            <div class="gallery" id="gallery" role="list" aria-label="Event photos">
+              <!-- Populated from GALLERY_DATA in script.js -->
+            </div>
+            <button type="button" class="btn btn-outline highlights-btn" id="see-all-photos" aria-expanded="false">
+              See all photos
+            </button>
+          </div>
+
+          <div class="highlights-col highlights-col--videos" id="video-holder">
+            <h3 class="subsection-title">Videos</h3>
+            <div class="video-list" id="video-list" role="list" aria-label="Event videos">
+              <!-- Populated from VIDEOS_DATA in script.js -->
+            </div>
+            <button type="button" class="btn btn-outline highlights-btn" id="show-all-videos" aria-expanded="false">
+              Show all videos
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-curve section-curve--wave section-curve--to-footer" aria-hidden="true" data-curve-fill="footer"></div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container container--inset footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">SHE</span>
+        <p>Women-led event management for women in business · United Arab Emirates</p>
+        <p class="footer-contact">
+          <a href="tel:+971501234567" data-phone-link data-phone-display>+971 50 123 4567</a>
+          <span class="footer-contact-sep" aria-hidden="true">·</span>
+          <a href="mailto:hello@sheevents.ae">hello@sheevents.ae</a>
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#what-we-do">What We Do</a>
+        <a href="#upcoming-events">Events</a>
+        <a href="#connect-she">Connect</a>
+        <a href="#she-highlights">Highlights</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="year"></span> SHE Event Management. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a href="tel:+971501234567" class="call-fab" data-phone-link aria-label="Call SHE">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    <span>Call Us</span>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
