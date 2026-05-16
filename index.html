@@ -24,8 +24,7 @@
   <header class="site-header" id="site-header">
     <div class="header-inner container container--inset">
       <a href="#banner" class="logo" aria-label="SHE home">
-        <span class="logo-mark">SHE</span>
-        <span class="logo-tagline">Women-Led Events</span>
+        <img src="assets/images/she-logo.png" alt="SHE Women-Led Events" class="site-logo-img">
       </a>
       <div class="header-end">
         <nav class="site-nav" id="site-nav" aria-label="Primary">
@@ -69,7 +68,11 @@
       <!-- 1.1 Banner -->
       <section class="banner section section--flush" id="banner" aria-labelledby="banner-heading">
         <div class="banner-visual" aria-hidden="true">
-          <img class="banner-image" src="assets/images/women.png" alt="" width="1920" height="1080" loading="eager">
+          <picture>
+            <source media="(max-width: 1024px)" srcset="assets/images/women-mobile.png">
+            <img class="banner-image" src="assets/images/women.png" alt="" width="1920" height="1080" loading="eager">
+          </picture>
+
           <div class="banner-overlay"></div>
         </div>
         <div class="banner-panel">

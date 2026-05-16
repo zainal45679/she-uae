@@ -21,8 +21,8 @@
   --font-display: "Libre Baskerville", Georgia, serif;
   --font-body: "Outfit", system-ui, sans-serif;
 
-  --page-gutter: clamp(1.75rem, 5vw, 3rem);
-  --page-gutter-left: clamp(2.5rem, 8vw, 6.5rem);
+  --page-gutter: clamp(1rem, 5vw, 3rem);
+  --page-gutter-left: clamp(1rem, 8vw, 6.5rem);
   --content-max: 1120px;
 
   --space-xs: 0.5rem;
@@ -48,7 +48,7 @@
   --shadow-card: 0 12px 40px rgba(38, 10, 13, 0.09);
   --shadow-gold: 0 4px 20px rgba(205, 178, 124, 0.15);
 
-  --header-height: 76px;
+  --header-height: 130px;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
   --reveal-duration: 0.85s;
@@ -400,7 +400,7 @@ textarea {
 
 .section-header {
   text-align: left;
-  max-width: 40rem;
+  max-width: none;
   margin-inline: 0;
   margin-bottom: var(--space-xl);
 }
@@ -1734,7 +1734,7 @@ textarea {
     --space-lg: 1.75rem;
     --space-xl: 2.5rem;
     --space-2xl: 3.5rem;
-    --header-height: 52px;
+    --header-height: 72px;
     --text-xs: 0.75rem;
     --text-sm: 0.875rem;
     --text-base: 1rem;
@@ -2179,4 +2179,35 @@ textarea {
   .banner {
     padding-bottom: calc(var(--space-lg) + (var(--curve-height) * 3)) !important;
   }
+}
+/* Controls the size of your new image logo in the header */
+.site-logo-img {
+  max-height: 90px; 
+  width: auto;
+  display: block;
+}
+
+/* Make it slightly smaller on mobile phones */
+@media (max-width: 767px) {
+  .site-logo-img {
+    max-height: 44px; 
+  }
+}
+
+/* Override left and right padding strictly for the header */
+.header-inner.container {
+  padding-left: 0rem !important;  /* Controls the space to the left of the Logo */
+  padding-right: 0rem !important; /* Controls the space to the right of the Menu/Theme button */
+}
+
+/* For mobile phones */
+@media (max-width: 767px) {
+  .header-inner.container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+.what-we-do .section-header {
+  max-width: none !important;
 }
