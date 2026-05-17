@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="SHE — Women-led event management in the UAE. Professional gatherings, leadership forums, and corporate experiences created for and by women.">
   <title>SHE | Women-Led Event Management</title>
+
+  <!-- 🚀 PERFORMANCE UPGRADE: Preload the huge Hero images so they load instantly -->
+  <link rel="preload" as="image" href="assets/images/women-mobile.png" media="(max-width: 1024px)">
+  <link rel="preload" as="image" href="assets/images/women.png" media="(min-width: 1025px)">
+  
+  <!-- 🚀 PERFORMANCE UPGRADE: Preload the Connect SHE background images -->
+  <link rel="preload" as="image" href="assets/images/gallery/connect-mobile.png" media="(max-width: 1023px)">
+  <link rel="preload" as="image" href="assets/images/gallery/connect.png" media="(min-width: 1024px)">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,7 +33,7 @@
   <header class="site-header" id="site-header">
     <div class="header-inner container container--inset">
       <a href="#banner" class="logo" aria-label="SHE home">
-        <img src="assets/images/she-logo.png" alt="SHE Women-Led Events" class="site-logo-img">
+        <img src="assets/images/she-logo.png" alt="SHE Women-Led Events" class="site-logo-img" fetchpriority="high">
       </a>
       <div class="header-end">
         <nav class="site-nav" id="site-nav" aria-label="Primary">
@@ -70,7 +79,8 @@
         <div class="banner-visual" aria-hidden="true">
           <picture>
             <source media="(max-width: 1024px)" srcset="assets/images/women-mobile.png">
-            <img class="banner-image" src="assets/images/women.png" alt="" width="1920" height="1080" loading="eager">
+            <!-- 🚀 PERFORMANCE UPGRADE: Changed loading="eager" to fetchpriority="high" -->
+            <img class="banner-image" src="assets/images/women.png" alt="" width="1920" height="1080" fetchpriority="high">
           </picture>
 
           <div class="banner-overlay"></div>
