@@ -1472,17 +1472,25 @@ textarea {
 }
 
 /* Videos list */
+/* Videos list */
 .video-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Displays 2 videos side-by-side. Change to repeat(3, 1fr) for 3 columns */
   gap: var(--space-md);
 }
 
-.video-card--extra {
+/* Hide videos after the 2nd one by default. Change (n+3) to (n+4) if you want 3 visible by default */
+.video-list > *:nth-child(n+3) {
   display: none;
 }
 
-.video-list.is-expanded .video-card--extra {
+/* Show all videos when the section is expanded */
+.video-list.is-expanded > * {
+  display: block !important;
+}
+
+/* Keep original class for compatibility if used in HTML, but reset its default behavior */
+.video-card--extra {
   display: block;
 }
 
@@ -1497,7 +1505,7 @@ textarea {
 
 .video-card__poster {
   position: relative;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 4; /* Changed from 16/9 to Portrait 3:4 */
 }
 
 .video-card__poster img {
@@ -1507,7 +1515,7 @@ textarea {
 }
 
 .video-card__embed {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 4; /* Changed from 16/9 to Portrait 3:4 */
 }
 
 .video-card__embed iframe {

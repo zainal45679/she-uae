@@ -85,33 +85,28 @@ const GALLERY_PREVIEW_COUNT = 4;
 const GALLERY_DATA = [
   {
     id: "gal-001",
-    src: "assets/images/gallery/gallery-1.jpg",
-    alt: "Women on stage at a SHE leadership panel",
+    src: "assets/images/gallery/1.jpg",
+    alt: "SHE event",
   },
   {
     id: "gal-002",
-    src: "assets/images/gallery/gallery-2.jpg",
-    alt: "Women professionals networking during a SHE event",
+    src: "assets/images/gallery/3.jpg",
+    alt: "Women-led SHE team",
   },
   {
     id: "gal-003",
-    src: "assets/images/gallery/gallery-3.jpg",
-    alt: "Guests arriving at a women-led SHE gathering",
+    src: "assets/images/gallery/2.jpg",
+    alt: "SHE Founders",
   },
   {
     id: "gal-004",
-    src: "assets/images/gallery/gallery-4.jpg",
-    alt: "Women-led SHE team coordinating an event",
+    src: "assets/images/gallery/4.jpg",
+    alt: "Women-led SHE team",
   },
   {
     id: "gal-005",
-    src: "assets/images/gallery/gallery-5.jpg",
-    alt: "Woman delivering a keynote at a SHE forum",
-  },
-  {
-    id: "gal-006",
-    src: "assets/images/gallery/gallery-6.jpg",
-    alt: "Women seated together at a professional SHE gathering",
+    src: "assets/images/gallery/5.jpg",
+    alt: "SHE Logo",
   },
 ];
 
@@ -120,33 +115,27 @@ const VIDEO_PREVIEW_COUNT = 1;
 const VIDEOS_DATA = [
   {
     id: "vid-001",
-    title: "Emirates Women's Leadership Forum",
-    thumbnail: "assets/images/gallery/gallery-2.jpg",
-    embedUrl: "https://www.youtube.com/embed/9No-FiEInLA?rel=0",
+    title: "Smart Money Talks",
+    thumbnail: "assets/images/gallery/IMG_9713.jpg",
+    embedUrl: "https://www.youtube.com/embed/4IO_tJPNh60",
   },
   {
     id: "vid-002",
-    title: "SHE Connect Networking Evening",
-    thumbnail: "assets/images/gallery/gallery-4.jpg",
-    embedUrl: "https://www.youtube.com/embed/9No-FiEInLA?rel=0",
+    title: "Gulf treat",
+    thumbnail: "assets/images/gallery/IMG_9714.jpg",
+    embedUrl: "https://www.youtube.com/embed/2l87jbIwfeQ",
   },
   {
     id: "vid-003",
-    title: "Women in Business Summit Highlights",
-    thumbnail: "assets/images/gallery/gallery-5.jpg",
-    embedUrl: "https://www.youtube.com/embed/9No-FiEInLA?rel=0",
+    title: "Welcome - SHE",
+    thumbnail: "assets/images/gallery/IMG_9716.jpg",
+    embedUrl: "https://www.youtube.com/embed/LXROoAlv-vw",
   },
   {
     id: "vid-004",
-    title: "Behind the Scenes — Event Production",
-    thumbnail: "assets/images/gallery/gallery-1.jpg",
-    embedUrl: "https://www.youtube.com/embed/9No-FiEInLA?rel=0",
-  },
-  {
-    id: "vid-005",
-    title: "Panel Discussion: Leading in the UAE",
-    thumbnail: "assets/images/gallery/gallery-6.jpg",
-    embedUrl: "https://www.youtube.com/embed/9No-FiEInLA?rel=0",
+    title: "She Moments",
+    thumbnail: "assets/images/gallery/IMG_9715.jpg",
+    embedUrl: "https://www.youtube.com/embed/tZXtexZIgwM",
   },
 ];
 
