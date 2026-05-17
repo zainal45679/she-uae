@@ -76,15 +76,31 @@
 
       <!-- 1.1 Banner -->
       <section class="banner section section--flush" id="banner" aria-labelledby="banner-heading">
-        <div class="banner-visual" aria-hidden="true">
-          <picture>
+                <div class="banner-visual" aria-hidden="true">
+          
+          <!-- IMAGE 1 (Base layer - Loads instantly) -->
+          <picture class="hero-slide hero-slide--1">
             <source media="(max-width: 1024px)" srcset="assets/images/women-mobile.png">
-            <!-- 🚀 PERFORMANCE UPGRADE: Changed loading="eager" to fetchpriority="high" -->
             <img class="banner-image" src="assets/images/women.png" alt="" width="1920" height="1080" fetchpriority="high">
+          </picture>
+
+          <!-- IMAGE 2 (Fades in second - Loads silently in background) -->
+          <picture class="hero-slide hero-slide--2">
+            <!-- IMPORTANT: Change these to your actual 2nd image filenames! -->
+            <source media="(max-width: 1024px)" srcset="assets/images/women2-mobile.png">
+            <img class="banner-image" src="assets/images/women2.png" alt="" width="1920" height="1080" loading="lazy">
+          </picture>
+
+          <!-- IMAGE 3 (Fades in third - Loads silently in background) -->
+          <picture class="hero-slide hero-slide--3">
+            <!-- IMPORTANT: Change these to your actual 3rd image filenames! -->
+            <source media="(max-width: 1024px)" srcset="assets/images/women3-mobile.png">
+            <img class="banner-image" src="assets/images/women3.png" alt="" width="1920" height="1080" loading="lazy">
           </picture>
 
           <div class="banner-overlay"></div>
         </div>
+
         <div class="banner-panel">
           <div class="banner-content container container--inset reveal reveal--hero">
             <p class="banner-eyebrow">Women-led · UAE</p>

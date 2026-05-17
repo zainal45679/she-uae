@@ -2226,4 +2226,50 @@ textarea {
     background-image: url('assets/images/gallery/connect-mobile.png');
   }
 }
+/* --- HARDWARE-ACCELERATED HERO SLIDESHOW --- */
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* Image 1 stays permanently at the back so the screen never goes blank */
+.hero-slide--1 {
+  opacity: 1; 
+  z-index: 1;
+}
+
+/* Image 2 sits on top and fades in/out */
+.hero-slide--2 {
+  opacity: 0;
+  z-index: 2;
+  animation: heroFadeTwo 18s infinite ease-in-out;
+}
+
+/* Image 3 sits on the very top and fades in/out */
+.hero-slide--3 {
+  opacity: 0;
+  z-index: 3;
+  animation: heroFadeThree 18s infinite ease-in-out;
+}
+
+/* The math for a flawless 3-image crossfade */
+@keyframes heroFadeTwo {
+  0%, 25% { opacity: 0; }
+  33%, 58% { opacity: 1; }
+  66%, 100% { opacity: 0; }
+}
+
+@keyframes heroFadeThree {
+  0%, 58% { opacity: 0; }
+  66%, 92% { opacity: 1; }
+  100% { opacity: 0; }
+}
+/* Ensure the dark gradient overlay stays on top of all the sliding images */
+.banner-overlay {
+  z-index: 10 !important;
+}
 
