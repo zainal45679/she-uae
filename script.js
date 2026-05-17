@@ -85,27 +85,27 @@ const GALLERY_PREVIEW_COUNT = 4;
 const GALLERY_DATA = [
   {
     id: "gal-001",
-    src: "assets/images/gallery/1.jpg",
+    src: "assets/images/gallery/photo1.jpg",
     alt: "SHE event",
   },
   {
     id: "gal-002",
-    src: "assets/images/gallery/3.jpg",
+    src: "assets/images/gallery/photo3.jpg",
     alt: "Women-led SHE team",
   },
   {
     id: "gal-003",
-    src: "assets/images/gallery/2.jpg",
+    src: "assets/images/gallery/photo2.jpg",
     alt: "SHE Founders",
   },
   {
     id: "gal-004",
-    src: "assets/images/gallery/4.jpg",
+    src: "assets/images/gallery/photo4.jpg",
     alt: "Women-led SHE team",
   },
   {
     id: "gal-005",
-    src: "assets/images/gallery/5.jpg",
+    src: "assets/images/gallery/photo5.jpg",
     alt: "SHE Logo",
   },
 ];
