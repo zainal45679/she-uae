@@ -2273,3 +2273,19 @@ textarea {
   z-index: 10 !important;
 }
 
+/* --- REDUCE BANNER OVERLAY OPACITY ON MOBILE --- */
+@media (max-width: 767px) {
+  :root {
+    /* Makes the top of the image much more visible (changed from 0.97 to 0.3) */
+    --banner-overlay-start: rgba(252, 250, 247, 0.3) !important;
+    
+    /* Keeps enough white behind the text so you can still read it (changed from 0.9 to 0.75) */
+    --banner-overlay-mid: rgba(252, 250, 247, 0.75) !important;
+  }
+
+  /* Do the exact same thing for Dark Mode! */
+  [data-theme="dark"] {
+    --banner-overlay-start: rgba(20, 6, 8, 0.3) !important;
+    --banner-overlay-mid: rgba(26, 10, 13, 0.75) !important;
+  }
+}
