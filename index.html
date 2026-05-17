@@ -153,97 +153,25 @@
     </div><!-- /.home-page -->
 
     <!-- 2. Connect SHE -->
-    <section class="connect-she section section--curved-top" id="connect-she" aria-labelledby="connect-she-heading">
-      <div class="section-curve section-curve--wave" aria-hidden="true" data-curve-fill="muted"></div>
-      <div class="container container--inset">
-        <header class="section-header reveal">
-          <p class="section-eyebrow">Connect SHE</p>
-          <h2 id="connect-she-heading">Work with our women-led team</h2>
-          <p class="section-intro connect-callout reveal">
-            Prefer to speak with us directly?
-            <a href="tel:+971501234567" class="inline-call" data-phone-link data-phone-display>+971 50 123 4567</a>
-          </p>
-        </header>
-
-        <div class="connect-grid reveal-stagger">
-          <!-- 2.1 Booking Form -->
-          <div class="subsection booking-form-block" id="booking-form-section">
-            <h3 class="subsection-title">Booking Form</h3>
-            <p class="subsection-intro">Plan your next women-focused event. We respond within two business days.</p>
-            <form class="booking-form" id="booking-form" novalidate>
-              <!-- action="/api/bookings" method="post" for later backend use -->
-              <input type="hidden" name="access_key" value="92886530-4518-453c-bbf7-96df54bda601">
-              <input type="hidden" name="subject" value="New Event Booking Enquiry">
-              <div class="form-row">
-                <div class="form-field">
-                  <label for="booking-name">Full name</label>
-                  <input type="text" id="booking-name" name="fullName" required autocomplete="name" placeholder="Your name">
-                </div>
-                <div class="form-field">
-                  <label for="booking-email">Email</label>
-                  <input type="email" id="booking-email" name="email" required autocomplete="email" placeholder="you@company.ae">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-field">
-                  <label for="booking-company">Company</label>
-                  <input type="text" id="booking-company" name="company" autocomplete="organization" placeholder="Organisation name">
-                </div>
-                <div class="form-field">
-                  <label for="booking-type">Event type</label>
-                  <select id="booking-type" name="eventType" required>
-                    <option value="" disabled selected>Select type</option>
-                    <option value="leadership">Women's Leadership Forum</option>
-                    <option value="corporate">Corporate Event</option>
-                    <option value="networking">Women's Networking Session</option>
-                    <option value="brand">Brand Collaboration</option>
-                    <option value="gathering">Professional Gathering</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-field">
-                <label for="booking-date">Preferred date</label>
-                <input type="date" id="booking-date" name="preferredDate">
-              </div>
-              <div class="form-field">
-                <label for="booking-message">Event details</label>
-                <textarea id="booking-message" name="message" rows="4" required placeholder="Brief overview of your event requirements"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit enquiry</button>
-              <p class="form-feedback" id="booking-feedback" role="status" aria-live="polite"></p>
-            </form>
-          </div>
-
-          <!-- 2.2 Participate with SHE -->
-          <aside class="subsection participate-block" id="participate-she" aria-labelledby="participate-heading">
-            <h3 class="subsection-title" id="participate-heading">Participate with SHE</h3>
-            <p class="subsection-intro">Contribute as a speaker, sponsor, or partner shaping professional events for women in the UAE.</p>
-            <ul class="participate-list">
-              <li>
-                <strong>Women Speakers</strong>
-                <span>Lead panels, keynotes, and mentorship sessions at SHE forums.</span>
-              </li>
-              <li>
-                <strong>Sponsors</strong>
-                <span>Support programming that puts women's leadership and professional growth first.</span>
-              </li>
-              <li>
-                <strong>Partners</strong>
-                <span>Collaborate with a women-led team on venues, production, and hospitality.</span>
-              </li>
-            </ul>
-            <div class="participate-actions">
-              <a href="tel:+971501234567" class="btn btn-call" data-phone-link>
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-                Call Us
-              </a>
-              <a href="mailto:hello@sheevents.ae" class="btn btn-outline">hello@sheevents.ae</a>
-            </div>
-          </aside>
-        </div>
+<section class="connect-she section section--curved-top" id="connect-she" aria-labelledby="connect-she-heading">
+  <div class="section-curve section-curve--wave" aria-hidden="true" data-curve-fill="muted"></div>
+  <div class="container container--inset">
+    
+    <div class="connect-centered reveal-stagger">
+      <h2 id="connect-she-heading" class="connect-title">Connect SHE</h2>
+      <p class="connect-intro">
+        Ready to plan a women-focused event, or want to contribute as a speaker, sponsor, or partner? Let's create something impactful together.
+      </p>
+      
+      <div class="connect-actions">
+        <!-- Replace href with your actual links -->
+        <a href="https://your-booking-site.com" target="_blank" rel="noopener" class="btn btn-primary">Booking Form</a>
+        <a href="https://your-participate-site.com" target="_blank" rel="noopener" class="btn btn-call">Participate with SHE</a>
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
 
     <!-- 3. SHE Highlights -->
     <section class="she-highlights section section--curved-top" id="she-highlights" aria-labelledby="she-highlights-heading">

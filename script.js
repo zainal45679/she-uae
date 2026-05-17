@@ -338,101 +338,6 @@ function initHeader() {
   }
 }
 
-function initBookingForm() {
-  const form = document.getElementById("booking-form");
-  const feedback = document.getElementById("booking-feedback");
-  if (!form || !feedback) return;
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    feedback.textContent = "";
-    feedback.className = "form-feedback";
-
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-
-    // Grab the submit button to show a loading state
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalBtnText = submitBtn.textContent;
-    submitBtn.textContent = "Sending...";
-    submitBtn.disabled = true;
-
-    try {
-      // 1. Gather form data and convert it to strict JSON
-      const formData = new FormData(form);
-      const object = Object.fromEntries(formData);
-      const json = JSON.stringify(object);
-      // 2. Send the JSON to Web3Forms with strict headers
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: json
-      });
-      const data = await response.json();
-
-      if (data.success) {
-        // Success! Web3Forms accepted it.
-        feedback.textContent = "Thank you. Your enquiry has been received. We will be in touch shortly.";
-        feedback.classList.add("is-success");
-        form.reset();
-      } else {
-        // Web3Forms returned an error
-        feedback.textContent = `Submission failed. Please try again, call ${SITE_CONTACT.phoneDisplay}, or email ${SITE_CONTACT.email}.`;
-        feedback.classList.add("is-error");
-      }
-    } catch (error) {
-      // Network error (user lost internet connection)
-      feedback.textContent = `Network error. Please check your connection or call ${SITE_CONTACT.phoneDisplay}.`;
-      feedback.classList.add("is-error");
-    } finally {
-      // Restore the button text and make it clickable again
-      submitBtn.textContent = originalBtnText;
-      submitBtn.disabled = false;
-    }
-  });
-}
-
-
-// FOR LATER BACK-END USE
-// function initBookingForm() {
-//   const form = document.getElementById("booking-form");
-//   const feedback = document.getElementById("booking-feedback");
-//   if (!form || !feedback) return;
-
-//   form.addEventListener("submit", async (e) => {
-//     e.preventDefault();
-//     feedback.textContent = "";
-//     feedback.className = "form-feedback";
-
-//     if (!form.checkValidity()) {
-//       form.reportValidity();
-//       return;
-//     }
-
-//     const payload = Object.fromEntries(new FormData(form).entries());
-//     payload.submittedAt = new Date().toISOString();
-
-//     /* Backend-ready: POST to form.action with JSON body */
-//     try {
-//       // Demo: simulate successful submission until API is connected
-//       await new Promise((resolve) => setTimeout(resolve, 600));
-//       feedback.textContent = "Thank you. Your enquiry has been received. We will be in touch shortly.";
-//       feedback.classList.add("is-success");
-//       form.reset();
-//     } catch {
-//       feedback.textContent = `Something went wrong. Please try again, call ${SITE_CONTACT.phoneDisplay}, or email ${SITE_CONTACT.email}.`;
-//       feedback.classList.add("is-error");
-//     }
-
-//     console.info("[SHE Booking Payload]", payload);
-//   });
-// }
-
 function initGalleryLightbox() {
   let lightbox = document.getElementById("gallery-lightbox");
   if (!lightbox) {
@@ -666,7 +571,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollReveal();
   refreshScrollReveal?.();
   initHeader();
-  initBookingForm();
   initGalleryLightbox();
   initVideoList();
   initHighlightsExpand();
