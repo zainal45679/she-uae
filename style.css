@@ -311,16 +311,6 @@ textarea {
   box-shadow: inset 0 4px 0 0 var(--color-bg-warm);
 }
 
-.connect-she > .section-curve {
-  background: var(--color-bg);
-  box-shadow: inset 0 4px 0 0 var(--color-bg);
-}
-
-.she-highlights > .section-curve {
-  background: var(--color-bg-muted);
-  box-shadow: inset 0 4px 0 0 var(--color-bg-muted);
-}
-
 .section--curved-top > .container {
   position: relative;
   z-index: 1;
@@ -1260,10 +1250,6 @@ textarea {
    Connect
    ========================================================================== */
 
-.connect-she {
-  background: var(--color-bg-muted);
-}
-
 .connect-centered {
   max-width: 42rem;
   margin: 0 auto;
@@ -2168,5 +2154,76 @@ textarea {
 [data-theme="dark"] .connect-actions .btn-call:hover {
   background: var(--color-accent);
   color: var(--color-bg);
+}
+
+/* --- THE ULTIMATE IMAGE FIX (NO GRADIENTS) --- */
+
+/* 1. TOP WAVE: Make the solid backing transparent so the image shows through */
+.connect-she > .section-curve {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: transparent !important; /* Hides the solid rectangle */
+}
+
+/* 2. BOTTOM WAVE: Flip it upside down! The wave cuts INTO the image, and the straight edge touches the section below */
+.she-highlights > .section-curve {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: transparent !important; /* Hides the solid rectangle */
+  transform: translateY(-100%) scaleY(-1) !important; /* The magic flip */
+}
+
+/* Force the bottom wave AND its stroke to perfectly match the Highlights section */
+.she-highlights > .section-curve path {
+  fill: var(--color-bg-warm) !important;
+  stroke: var(--color-bg-warm) !important;
+}
+
+/* Hide the extra 3px straight line the Javascript automatically injects */
+.she-highlights > .section-curve rect[height="3"] {
+  display: none !important;
+}
+
+
+/* 3. SAFE CONTAINER */
+.connect-she {
+  position: relative;
+  background: var(--color-bg-muted) !important;
+  isolation: isolate;
+}
+
+/* 4. FULL IMAGE LAYER (No fades!) */
+.connect-she::before {
+  content: "";
+  position: absolute;
+  /* Pull the image up so it sits directly behind the top wave */
+  top: calc(-1 * var(--curve-height));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('assets/images/gallery/connect.png') center/cover no-repeat;
+  z-index: -2;
+}
+
+/* 5. DARK OVERLAY LAYER */
+.connect-she::after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--curve-height));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto !important;
+  background: var(--color-bg-muted) !important;
+  opacity: 0.85; 
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Swap the Connect SHE background image for Mobile & Tablet (Screens smaller than 1024px) */
+@media (max-width: 1023px) {
+  .connect-she::before {
+    background-image: url('assets/images/gallery/connect-mobile.png');
+  }
 }
 
