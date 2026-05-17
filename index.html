@@ -170,7 +170,10 @@
           <div class="subsection booking-form-block" id="booking-form-section">
             <h3 class="subsection-title">Booking Form</h3>
             <p class="subsection-intro">Plan your next women-focused event. We respond within two business days.</p>
-            <form class="booking-form" id="booking-form" action="/api/bookings" method="post" novalidate>
+            <form class="booking-form" id="booking-form" novalidate>
+              <!-- action="/api/bookings" method="post" for later backend use -->
+              <input type="hidden" name="access_key" value="92886530-4518-453c-bbf7-96df54bda601">
+              <input type="hidden" name="subject" value="New Event Booking Enquiry">
               <div class="form-row">
                 <div class="form-field">
                   <label for="booking-name">Full name</label>
