@@ -2289,3 +2289,210 @@ textarea {
     --banner-overlay-mid: rgba(26, 10, 13, 0.75) !important;
   }
 }
+
+/* Fix "Get in Touch" button text on hover in Dark Mode */
+[data-theme="dark"] .site-nav a.nav-cta:hover {
+  color: #260a0d !important;
+}
+
+
+/* ==========================================================================
+   Corporate Footer Redesign (Gold Background / Dark Text)
+   ========================================================================== */
+
+.site-footer {
+  background: var(--color-primary);
+  color: rgba(38, 10, 13, 0.85); /* Dark maroon to look elegant on gold bg */
+  padding-block: var(--space-2xl) var(--space-lg);
+}
+
+.footer-corporate-grid {
+  display: grid;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .footer-corporate-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.footer-col--brand .logo-mark {
+  color: #260a0d;
+  font-size: 2.25rem;
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.footer-company {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #260a0d;
+  margin-bottom: var(--space-sm);
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 28rem;
+}
+
+.footer-heading {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #260a0d;
+  margin-bottom: var(--space-md);
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-nav-list a,
+.footer-contact-list a,
+.footer-contact-list span {
+  font-size: 1.05rem;
+  color: rgba(38, 10, 13, 0.85);
+  transition: color var(--transition);
+}
+
+.footer-nav-list a:hover,
+.footer-contact-list a:hover {
+  color: #260a0d;
+  font-weight: 600;
+}
+
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-contact-list svg {
+  width: 20px;
+  height: 20px;
+  color: #260a0d;
+  flex-shrink: 0;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(38, 10, 13, 0.15);
+  font-size: 0.9rem;
+}
+
+.footer-legal {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.footer-legal a {
+  opacity: 0.8;
+}
+
+.footer-legal a:hover {
+  opacity: 1;
+  color: #260a0d;
+}
+
+.footer-copy {
+  border-top: none !important;
+  padding-top: 0 !important;
+}
+
+/* --- PREMIUM MOBILE FOOTER (SIDE-BY-SIDE) --- */
+@media (max-width: 767px) {
+  .site-footer {
+    padding-block: var(--space-lg) var(--space-md);
+  }
+  
+  .footer-corporate-grid {
+    display: grid;
+    /* Brand takes row 1, Links and Contact split row 2 (45% / 55% width) */
+    grid-template-columns: 4.5fr 5.5fr; 
+    gap: var(--space-md) 0.5rem;
+  }
+  
+  /* Brand takes up the full width of the top row */
+  .footer-col--brand {
+    grid-column: 1 / -1; 
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid rgba(38, 10, 13, 0.12);
+    padding-top: 0;
+  }
+  
+  /* Links and Contact sit side-by-side on the second row */
+  .footer-col--links, 
+  .footer-col--contact {
+    grid-column: span 1;
+    padding-block: 0;
+    border-bottom: none;
+  }
+  
+  .footer-col--brand .logo-mark { font-size: 1.75rem; }
+  
+  .footer-company,
+  .footer-heading {
+    font-size: 1rem;
+    margin-bottom: var(--space-sm);
+  }
+  
+  /* Text sized perfectly to fit side-by-side */
+  .footer-tagline, 
+  .footer-nav-list a, 
+  .footer-contact-list a, 
+  .footer-contact-list span {
+    font-size: 0.8rem; 
+    line-height: 1.4;
+  }
+  
+  /* Shrink icons to match the tight layout */
+  .footer-contact-list svg {
+    width: 14px;
+    height: 14px;
+    margin-top: 1px; /* Aligns icon with text */
+  }
+  
+  /* Single column lists since they are sharing the screen width */
+  .footer-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .footer-contact-list {
+    gap: 0.75rem;
+  }
+  
+  /* Tidy up the bottom bar */
+  .footer-bottom {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 1rem;
+    padding-top: var(--space-md);
+    margin-top: var(--space-xs);
+    font-size: 0.75rem;
+  }
+  
+  .footer-legal {
+    justify-content: center;
+    width: 100%;
+    gap: 1.25rem;
+  }
+}

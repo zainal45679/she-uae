@@ -466,41 +466,6 @@ function initSectionCurves() {
   });
 }
 
-function setTheme(theme) {
-  const root = document.documentElement;
-  const toggle = document.getElementById("theme-toggle");
-  const isDark = theme === "dark";
-
-  root.setAttribute("data-theme", isDark ? "dark" : "light");
-
-  if (toggle) {
-    toggle.setAttribute("aria-pressed", String(isDark));
-    toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
-    toggle.setAttribute("title", isDark ? "Light mode" : "Dark mode");
-  }
-
-  try {
-    localStorage.setItem("she-theme", isDark ? "dark" : "light");
-  } catch {
-    /* storage unavailable */
-  }
-}
-
-function initThemeToggle() {
-  const toggle = document.getElementById("theme-toggle");
-  if (!toggle) return;
-
-  const stored = localStorage.getItem("she-theme");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const initial = stored || (prefersDark ? "dark" : "light");
-  setTheme(initial);
-
-  toggle.addEventListener("click", () => {
-    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-    setTheme(isDark ? "light" : "dark");
-  });
-}
-
 function initSmoothAnchors() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
@@ -562,7 +527,6 @@ function initScrollReveal() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  initThemeToggle();
   initSectionCurves();
   initContactLinks();
   renderEvents();
