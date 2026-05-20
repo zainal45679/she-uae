@@ -6,11 +6,9 @@
   <meta name="description" content="SHE — Women-led event management in the UAE. Professional gatherings, leadership forums, and corporate experiences created for and by women.">
   <title>SHE | Women-Led Event Management</title>
 
-  <!-- 🚀 PERFORMANCE UPGRADE: Preload the huge Hero images so they load instantly -->
+  <!-- Preload critical assets -->
   <link rel="preload" as="image" href="assets/images/women-mobile.png" media="(max-width: 1024px)">
   <link rel="preload" as="image" href="assets/images/women.png" media="(min-width: 1025px)">
-  
-  <!-- 🚀 PERFORMANCE UPGRADE: Preload the Connect SHE background images -->
   <link rel="preload" as="image" href="assets/images/gallery/connect-mobile.png" media="(max-width: 1023px)">
   <link rel="preload" as="image" href="assets/images/gallery/connect.png" media="(min-width: 1024px)">
 
@@ -22,6 +20,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Header -->
   <header class="site-header" id="site-header">
     <div class="header-inner container container--inset">
       <a href="#banner" class="logo" aria-label="SHE home">
@@ -38,7 +37,6 @@
             <li><a href="#connect-she" class="nav-cta">Get in Touch</a></li>
           </ul>
         </nav>
-        <!-- THEME TOGGLE REMOVED HERE -->
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
           <span></span>
           <span></span>
@@ -48,30 +46,26 @@
   </header>
 
   <main id="main">
-
-    <!-- 1. Home Page -->
     <div class="home-page" id="home">
 
-      <!-- 1.1 Banner -->
+      <!-- Hero Section -->
       <section class="banner section section--flush" id="banner" aria-labelledby="banner-heading">
         <div class="banner-visual" aria-hidden="true">
           
-          <!-- IMAGE 1 (Base layer - Loads instantly) -->
+          <!-- Slide 1 -->
           <picture class="hero-slide hero-slide--1">
             <source media="(max-width: 1024px)" srcset="assets/images/women-mobile.png">
             <img class="banner-image" src="assets/images/women.png" alt="" width="1920" height="1080" fetchpriority="high">
           </picture>
 
-          <!-- IMAGE 2 (Fades in second - Loads silently in background) -->
+          <!-- Slide 2 -->
           <picture class="hero-slide hero-slide--2">
-            <!-- IMPORTANT: Change these to your actual 2nd image filenames! -->
             <source media="(max-width: 1024px)" srcset="assets/images/women2-mobile.png">
             <img class="banner-image" src="assets/images/women2.png" alt="" width="1920" height="1080" loading="lazy">
           </picture>
 
-          <!-- IMAGE 3 (Fades in third - Loads silently in background) -->
+          <!-- Slide 3 -->
           <picture class="hero-slide hero-slide--3">
-            <!-- IMPORTANT: Change these to your actual 3rd image filenames! -->
             <source media="(max-width: 1024px)" srcset="assets/images/women3-mobile.png">
             <img class="banner-image" src="assets/images/women3.png" alt="" width="1920" height="1080" loading="lazy">
           </picture>
@@ -97,22 +91,19 @@
         </div>
       </section>
 
-      <!-- 1.2 What We Do (UPDATED WITH COMPACT 6-GRID) -->
+      <!-- Services Section -->
       <section class="what-we-do section section--curved-top" id="what-we-do" aria-labelledby="what-we-do-heading">
         <div class="section-curve section-curve--wave" aria-hidden="true" data-curve-fill="warm"></div>
         <div class="container container--inset">
           
-          <!-- Unified Header -->
           <header class="section-header reveal">
             <p class="section-eyebrow">What We Do</p>
-            <h2 id="what-we-do-heading" style="font-size: clamp(3.1rem, 3.5vw, 2.6rem);">We gather. We grow. We thrive—together.</h2>
+            <h2 id="what-we-do-heading">We gather. We grow. We thrive—together.</h2>
             <p class="section-intro" style="max-width: 64rem;">We create purposeful experiences that bridge generational and corporate gaps, proving that every industry benefits from shared feminine leadership. Whether you are building a tech startup, managing a household, studying for a degree, or scaling a marketing agency, <strong style="color: var(--color-primary); font-weight: var(--weight-medium);">your voice matters here</strong>.</p>
           </header>
 
-          <!-- 6-Card Grid (Perfect 3-Column Layout) -->
           <div class="events-grid reveal-stagger">
             
-            <!-- The Vision -->
             <article class="service-card">
               <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: var(--space-sm);">
                 <span class="service-icon" aria-hidden="true" style="width: 28px; height: 28px; margin-bottom: 0; flex-shrink: 0;">
@@ -123,7 +114,6 @@
               <p>Shaping a global ecosystem where every woman can turn her natural curiosity into a thriving community and her raw passion into a sustainable profession.</p>
             </article>
 
-            <!-- The Mission -->
             <article class="service-card">
               <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: var(--space-sm);">
                 <span class="service-icon" aria-hidden="true" style="width: 28px; height: 28px; margin-bottom: 0; flex-shrink: 0;">
@@ -134,7 +124,6 @@
               <p>To catalyze business growth and authentic connection through dynamic networking events.</p>
             </article>
 
-            <!-- Home & Heart -->
             <article class="service-card">
               <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: var(--space-sm);">
                 <span class="service-icon" aria-hidden="true" style="width: 28px; height: 28px; margin-bottom: 0; flex-shrink: 0;">
@@ -145,7 +134,6 @@
               <p>We believe sustainable empowerment begins at home, where confidence, care, and support create the foundation for long-term personal and professional growth.</p>
             </article>
             
-            <!-- Diverse Perspectives -->
             <article class="service-card">
               <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: var(--space-sm);">
                 <span class="service-icon" aria-hidden="true" style="width: 28px; height: 28px; margin-bottom: 0; flex-shrink: 0;">
@@ -156,7 +144,6 @@
               <p>We welcome women of every generation, background, and life stage, knowing that diverse experiences bring strength, wisdom, and fresh perspectives to our community.</p>
             </article>
             
-            <!-- Collective Uplift -->
             <article class="service-card">
               <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: var(--space-sm);">
                 <span class="service-icon" aria-hidden="true" style="width: 28px; height: 28px; margin-bottom: 0; flex-shrink: 0;">
@@ -167,7 +154,6 @@
               <p>We choose collaboration over competition, creating an environment where women support, encourage, and grow alongside one another toward shared success.</p>
             </article>
             
-            <!-- Shared Innovation -->
             <article class="service-card">
               <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: var(--space-sm);">
                 <span class="service-icon" aria-hidden="true" style="width: 28px; height: 28px; margin-bottom: 0; flex-shrink: 0;">
@@ -182,7 +168,7 @@
         </div>
       </section>
 
-      <!-- 1.3 Upcoming Events -->
+      <!-- Events Section -->
       <section class="upcoming-events section section--curved-top" id="upcoming-events" aria-labelledby="upcoming-events-heading">
         <div class="section-curve section-curve--wave section-curve--flip" aria-hidden="true" data-curve-fill="default"></div>
         <div class="container container--inset">
@@ -192,34 +178,32 @@
             <p class="section-intro">Explore upcoming expos, markets, and experiences curated by SHE.</p>
           </header>
           <div class="events-grid reveal-stagger" id="events-grid" role="list" aria-live="polite">
-            <!-- Event cards rendered by script.js -->
+            <!-- Event cards rendered dynamically via script.js -->
           </div>
         </div>
       </section>
 
-    </div><!-- /.home-page -->
-
-    <!-- 2. Connect SHE -->
-<section class="connect-she section section--curved-top" id="connect-she" aria-labelledby="connect-she-heading">
-  <div class="section-curve section-curve--wave" aria-hidden="true" data-curve-fill="muted"></div>
-  <div class="container container--inset">
-    <div class="connect-centered reveal-stagger">
-      <h2 id="connect-she-heading" class="connect-title">Connect SHE</h2>
-      <p class="connect-intro">
-        Ready to plan a women-focused event, or want to contribute as a speaker, sponsor, or partner? Let's create something impactful together.
-      </p>
-      
-      <div class="connect-actions">
-        <!-- Replace href with your actual links -->
-        <a href="https://your-booking-site.com" target="_blank" rel="noopener" class="btn btn-primary">Booking Form</a>
-        <a href="https://your-participate-site.com" target="_blank" rel="noopener" class="btn btn-call">Participate with SHE</a>
-      </div>
     </div>
 
-  </div>
-</section>
+    <!-- Connect Section -->
+    <section class="connect-she section section--curved-top" id="connect-she" aria-labelledby="connect-she-heading">
+      <div class="section-curve section-curve--wave" aria-hidden="true" data-curve-fill="muted"></div>
+      <div class="container container--inset">
+        <div class="connect-centered reveal-stagger">
+          <h2 id="connect-she-heading" class="connect-title">Connect SHE</h2>
+          <p class="connect-intro">
+            Ready to plan a women-focused event, or want to contribute as a speaker, sponsor, or partner? Let's create something impactful together.
+          </p>
+          
+          <div class="connect-actions">
+            <a href="https://your-booking-site.com" target="_blank" rel="noopener" class="btn btn-primary">Booking Form</a>
+            <a href="https://your-participate-site.com" target="_blank" rel="noopener" class="btn btn-call">Participate with SHE</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- 3. SHE Highlights -->
+    <!-- Highlights Section -->
     <section class="she-highlights section section--curved-top" id="she-highlights" aria-labelledby="she-highlights-heading">
       <div class="section-curve section-curve--wave section-curve--flip" aria-hidden="true" data-curve-fill="warm"></div>
       <div class="container container--inset">
@@ -232,7 +216,7 @@
           <div class="highlights-col highlights-col--photos" id="photos">
             <h3 class="subsection-title">Photos</h3>
             <div class="gallery" id="gallery" role="list" aria-label="Event photos">
-              <!-- Populated from GALLERY_DATA in script.js -->
+              <!-- Populated via script.js -->
             </div>
             <button type="button" class="btn btn-outline highlights-btn" id="see-all-photos" aria-expanded="false">
               See all photos
@@ -242,7 +226,7 @@
           <div class="highlights-col highlights-col--videos" id="video-holder">
             <h3 class="subsection-title">Videos</h3>
             <div class="video-list" id="video-list" role="list" aria-label="Event videos">
-              <!-- Populated from VIDEOS_DATA in script.js -->
+              <!-- Populated via script.js -->
             </div>
             <button type="button" class="btn btn-outline highlights-btn" id="show-all-videos" aria-expanded="false">
               Show all videos
@@ -253,21 +237,19 @@
     </section>
 
     <div class="section-curve section-curve--wave section-curve--to-footer" aria-hidden="true" data-curve-fill="footer"></div>
-
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container container--inset">
       <div class="footer-corporate-grid">
         
-        <!-- Column 1: Brand -->
         <div class="footer-col footer-col--brand reveal">
           <span class="logo-mark">SHE</span>
           <p class="footer-company">SHEe Creative Events FZC LLC</p>
           <p class="footer-tagline">Designing professional gatherings, leadership forums, and corporate experiences with women at the centre.</p>
         </div>
 
-        <!-- Column 2: Quick Links -->
         <div class="footer-col footer-col--links reveal">
           <h4 class="footer-heading">Quick Links</h4>
           <nav class="footer-nav-list" aria-label="Footer">
@@ -278,7 +260,6 @@
           </nav>
         </div>
 
-        <!-- Column 3: Contact -->
         <div class="footer-col footer-col--contact reveal">
           <h4 class="footer-heading">Get in Touch</h4>
           <ul class="footer-contact-list">
@@ -296,10 +277,8 @@
             </li>
           </ul>
         </div>
-
       </div>
 
-      <!-- Footer Bottom -->
       <div class="footer-bottom">
         <p class="footer-copy">&copy; <span id="year"></span> SHEe Creative Events FZC LLC. All rights reserved.</p>
         <div class="footer-legal">
@@ -309,8 +288,6 @@
       </div>
     </div>
   </footer>
-
-
 
   <a href="tel:+971501234567" class="call-fab" data-phone-link aria-label="Call SHE">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>

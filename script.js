@@ -1,5 +1,5 @@
 /**
- * SHE Event Management — Frontend data & UI
+ * SHE Event Management — Frontend Data & UI
  * Event and gallery structures are backend-ready (JSON-serializable).
  */
 
@@ -11,22 +11,7 @@ const SITE_CONTACT = {
 
 /* --------------------------------------------------------------------------
    Events API-ready schema
-   {
-     id: string,
-     slug: string,
-     title: string,
-     date: string (ISO),
-     dateDisplay: string,
-     venue: string,
-     city: string,
-     description: string,
-     image: string,
-     imageAlt: string,
-     registerUrl: string,
-     status: 'upcoming' | 'sold_out' | 'past'
-   }
    -------------------------------------------------------------------------- */
-
 const EVENTS_DATA = [
   {
     id: "evt-001",
@@ -36,8 +21,7 @@ const EVENTS_DATA = [
     dateDisplay: "Date Announcing Soon",
     venue: "Venue Announcing Soon",
     city: "UAE",
-    description:
-      "An education-focused expo bringing together universities, institutions, academic consultants, and students under one platform to explore future academic opportunities and professional growth.",
+    description: "An education-focused expo bringing together universities, institutions, academic consultants, and students under one platform to explore future academic opportunities and professional growth.",
     image: "assets/images/events/event-1.png",
     imageAlt: "Students and university representatives at an education expo",
     registerUrl: "#connect-she",
@@ -51,8 +35,7 @@ const EVENTS_DATA = [
     dateDisplay: "Date Announcing Soon",
     venue: "Venue Announcing Soon",
     city: "UAE",
-    description:
-      "A creative marketplace event designed for student entrepreneurs to showcase, promote, and sell their products while connecting with brands, visitors, and fellow young creators.",
+    description: "A creative marketplace event designed for student entrepreneurs to showcase, promote, and sell their products while connecting with brands, visitors, and fellow young creators.",
     image: "assets/images/events/event-2.png",
     imageAlt: "Student entrepreneurs showcasing products at a market event",
     registerUrl: "#connect-she",
@@ -66,87 +49,37 @@ const EVENTS_DATA = [
     dateDisplay: "Stay Tuned",
     venue: "Details To Be Revealed",
     city: "UAE",
-    description:
-      "SHE is preparing more curated events, networking experiences, and collaborative gatherings designed for professionals, students, and emerging entrepreneurs across the UAE.",
+    description: "SHE is preparing more curated events, networking experiences, and collaborative gatherings designed for professionals, students, and emerging entrepreneurs across the UAE.",
     image: "assets/images/events/event-3.png",
     imageAlt: "Coming soon placeholder event banner",
     registerUrl: "#connect-she",
     status: "coming-soon",
-  },
+  }
 ];
 
 /* --------------------------------------------------------------------------
-   Gallery schema
-   { id, src, alt, layout?: 'wide' | 'tall' }
+   Gallery & Video Schema
    -------------------------------------------------------------------------- */
-
 const GALLERY_PREVIEW_COUNT = 4;
-
 const GALLERY_DATA = [
-  {
-    id: "gal-001",
-    src: "assets/images/gallery/photo1.jpg",
-    alt: "SHE event",
-  },
-  {
-    id: "gal-002",
-    src: "assets/images/gallery/photo3.jpg",
-    alt: "Women-led SHE team",
-  },
-  {
-    id: "gal-003",
-    src: "assets/images/gallery/photo2.jpg",
-    alt: "SHE Founders",
-  },
-  {
-    id: "gal-004",
-    src: "assets/images/gallery/photo4.jpg",
-    alt: "Women-led SHE team",
-  },
-  {
-    id: "gal-005",
-    src: "assets/images/gallery/photo5.jpg",
-    alt: "SHE Logo",
-  },
+  { id: "gal-001", src: "assets/images/gallery/photo1.jpg", alt: "SHE event" },
+  { id: "gal-002", src: "assets/images/gallery/photo3.jpg", alt: "Women-led SHE team" },
+  { id: "gal-003", src: "assets/images/gallery/photo2.jpg", alt: "SHE Founders" },
+  { id: "gal-004", src: "assets/images/gallery/photo4.jpg", alt: "Women-led SHE team" },
+  { id: "gal-005", src: "assets/images/gallery/photo5.jpg", alt: "SHE Logo" }
 ];
 
 const VIDEO_PREVIEW_COUNT = 1;
-
 const VIDEOS_DATA = [
-  {
-    id: "vid-001",
-    title: "Smart Money Talks",
-    thumbnail: "assets/images/gallery/IMG_9713.jpg",
-    embedUrl: "https://www.youtube.com/embed/4IO_tJPNh60",
-  },
-  {
-    id: "vid-002",
-    title: "Gulf treat",
-    thumbnail: "assets/images/gallery/IMG_9714.jpg",
-    embedUrl: "https://www.youtube.com/embed/2l87jbIwfeQ",
-  },
-  {
-    id: "vid-003",
-    title: "Welcome - SHE",
-    thumbnail: "assets/images/gallery/IMG_9716.jpg",
-    embedUrl: "https://www.youtube.com/embed/LXROoAlv-vw",
-  },
-  {
-    id: "vid-004",
-    title: "She Moments",
-    thumbnail: "assets/images/gallery/IMG_9715.jpg",
-    embedUrl: "https://www.youtube.com/embed/tZXtexZIgwM",
-  },
+  { id: "vid-001", title: "Smart Money Talks", thumbnail: "assets/images/gallery/IMG_9713.jpg", embedUrl: "https://www.youtube.com/embed/4IO_tJPNh60" },
+  { id: "vid-002", title: "Gulf treat", thumbnail: "assets/images/gallery/IMG_9714.jpg", embedUrl: "https://www.youtube.com/embed/2l87jbIwfeQ" },
+  { id: "vid-003", title: "Welcome - SHE", thumbnail: "assets/images/gallery/IMG_9716.jpg", embedUrl: "https://www.youtube.com/embed/LXROoAlv-vw" },
+  { id: "vid-004", title: "She Moments", thumbnail: "assets/images/gallery/IMG_9715.jpg", embedUrl: "https://www.youtube.com/embed/tZXtexZIgwM" }
 ];
 
 /* --------------------------------------------------------------------------
-   Render helpers
+   Render Helpers
    -------------------------------------------------------------------------- */
-
-/**
- * @param {typeof EVENTS_DATA[0]} event
- * @returns {string}
- */
 function renderEventCard(event) {
   const soldOut = event.status === "sold_out";
   const registerLabel = soldOut ? "Sold out" : "Register";
@@ -154,23 +87,9 @@ function renderEventCard(event) {
   const registerDisabled = soldOut ? "aria-disabled=\"true\"" : "";
 
   return `
-    <article
-      class="event-card"
-      role="listitem"
-      data-event-id="${event.id}"
-      data-event-slug="${event.slug}"
-      itemscope
-      itemtype="https://schema.org/Event"
-    >
+    <article class="event-card" role="listitem" data-event-id="${event.id}" data-event-slug="${event.slug}" itemscope itemtype="https://schema.org/Event">
       <div class="event-card__media">
-        <img
-          src="${event.image}"
-          alt="${event.imageAlt}"
-          width="640"
-          height="400"
-          loading="lazy"
-          itemprop="image"
-        >
+        <img src="${event.image}" alt="${event.imageAlt}" width="640" height="400" loading="lazy" itemprop="image">
       </div>
       <div class="event-card__body">
         <div class="event-card__meta">
@@ -182,43 +101,22 @@ function renderEventCard(event) {
         <h3 class="event-card__title" itemprop="name">${event.title}</h3>
         <p class="event-card__description" itemprop="description">${event.description}</p>
         <div class="event-card__footer">
-          <a
-            href="${event.registerUrl}"
-            class="${registerClass}"
-            data-register-for="${event.id}"
-            ${registerDisabled}
-          >${registerLabel}</a>
+          <a href="${event.registerUrl}" class="${registerClass}" data-register-for="${event.id}" ${registerDisabled}>${registerLabel}</a>
         </div>
       </div>
     </article>
   `;
 }
 
-/**
- * @param {typeof GALLERY_DATA[0]} item
- * @param {boolean} isExtra
- * @returns {string}
- */
 function renderGalleryItem(item, isExtra = false) {
   const extraClass = isExtra ? " gallery-item--extra" : "";
   return `
-    <button
-      type="button"
-      class="gallery-item${extraClass}"
-      role="listitem"
-      data-gallery-id="${item.id}"
-      aria-label="View image: ${item.alt}"
-    >
+    <button type="button" class="gallery-item${extraClass}" role="listitem" data-gallery-id="${item.id}" aria-label="View image: ${item.alt}">
       <img src="${item.src}" alt="${item.alt}" width="600" height="450" loading="lazy">
     </button>
   `;
 }
 
-/**
- * @param {typeof VIDEOS_DATA[0]} video
- * @param {boolean} isExtra
- * @returns {string}
- */
 function renderVideoCard(video, isExtra = false) {
   const extraClass = isExtra ? " video-card--extra" : "";
   return `
@@ -226,23 +124,12 @@ function renderVideoCard(video, isExtra = false) {
       <div class="video-card__media">
         <div class="video-card__poster">
           <img src="${video.thumbnail}" alt="" width="640" height="360" loading="lazy">
-          <button
-            type="button"
-            class="video-play"
-            data-embed-url="${video.embedUrl}"
-            aria-label="Play video: ${video.title}"
-          >
+          <button type="button" class="video-play" data-embed-url="${video.embedUrl}" aria-label="Play video: ${video.title}">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
           </button>
         </div>
         <div class="video-card__embed" hidden>
-          <iframe
-            src=""
-            title="${video.title}"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+          <iframe src="" title="${video.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
       <p class="video-card__title">${video.title}</p>
@@ -251,31 +138,24 @@ function renderVideoCard(video, isExtra = false) {
 }
 
 /* --------------------------------------------------------------------------
-   DOM init
+   DOM Initialization
    -------------------------------------------------------------------------- */
-
 function renderEvents() {
   const grid = document.getElementById("events-grid");
   if (!grid) return;
-  grid.innerHTML = EVENTS_DATA.filter((e) => e.status !== "past")
-    .map(renderEventCard)
-    .join("");
+  grid.innerHTML = EVENTS_DATA.filter((e) => e.status !== "past").map(renderEventCard).join("");
 }
 
 function renderGallery() {
   const gallery = document.getElementById("gallery");
   if (!gallery) return;
-  gallery.innerHTML = GALLERY_DATA.map((item, index) =>
-    renderGalleryItem(item, index >= GALLERY_PREVIEW_COUNT)
-  ).join("");
+  gallery.innerHTML = GALLERY_DATA.map((item, index) => renderGalleryItem(item, index >= GALLERY_PREVIEW_COUNT)).join("");
 }
 
 function renderVideos() {
   const list = document.getElementById("video-list");
   if (!list) return;
-  list.innerHTML = VIDEOS_DATA.map((video, index) =>
-    renderVideoCard(video, index >= VIDEO_PREVIEW_COUNT)
-  ).join("");
+  list.innerHTML = VIDEOS_DATA.map((video, index) => renderVideoCard(video, index >= VIDEO_PREVIEW_COUNT)).join("");
 }
 
 function initHighlightsExpand() {
@@ -314,9 +194,7 @@ function initHeader() {
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.getElementById("site-nav");
 
-  const onScroll = () => {
-    header.classList.toggle("is-scrolled", window.scrollY > 20);
-  };
+  const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 20);
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
@@ -375,12 +253,8 @@ function initGalleryLightbox() {
   });
 
   closeBtn.addEventListener("click", close);
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) close();
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") close();
-  });
+  lightbox.addEventListener("click", (e) => { if (e.target === lightbox) close(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
 }
 
 function initVideoList() {
@@ -390,7 +264,6 @@ function initVideoList() {
   list.addEventListener("click", (e) => {
     const playBtn = e.target.closest(".video-play");
     if (!playBtn) return;
-
     const card = playBtn.closest(".video-card");
     if (!card) return;
 
@@ -416,26 +289,19 @@ function initContactLinks() {
   document.querySelectorAll("[data-phone-link]").forEach((el) => {
     el.setAttribute("href", `tel:${SITE_CONTACT.phoneE164}`);
   });
-
   document.querySelectorAll("[data-phone-display]").forEach((el) => {
     el.textContent = SITE_CONTACT.phoneDisplay;
   });
 }
 
-/* Wave paths: top = section above, bottom = section below (no transparent gaps) */
-const CURVE_TOP =
-  "M0,0 L1440,0 L1440,36 C1280,12 1120,56 840,40 560,4 280,56 0,20 Z";
-const CURVE_BOTTOM =
-  "M0,20 C280,56 560,4 840,40 C1120,56 1280,12 1440,36 L1440,64 L0,64 Z";
-const FOOTER_TOP =
-  "M0,0 L1440,0 L1440,28 C1360,16 1240,52 1020,32 680,8 320,48 0,12 Z";
-const FOOTER_BOTTOM =
-  "M0,12 C320,48 680,8 1020,32 C1240,52 1360,16 1440,28 L1440,65 L0,65 Z";
+/* --------------------------------------------------------------------------
+   Dynamic SVG Section Curves
+   -------------------------------------------------------------------------- */
+const CURVE_TOP = "M0,0 L1440,0 L1440,36 C1280,12 1120,56 840,40 560,4 280,56 0,20 Z";
+const FOOTER_TOP = "M0,0 L1440,0 L1440,28 C1360,16 1240,52 1020,32 680,8 320,48 0,12 Z";
 
 function getCurveBgVar(el) {
   if (el.classList.contains("section-curve--to-footer")) {
-    const prev = el.previousElementSibling;
-    if (prev?.classList.contains("she-highlights")) return "var(--color-bg-warm)";
     return "var(--color-bg-warm)";
   }
 
@@ -480,7 +346,9 @@ function initSmoothAnchors() {
   });
 }
 
-/** Premium scroll reveal — re-run after dynamic renders */
+/* --------------------------------------------------------------------------
+   Scroll Reveal
+   -------------------------------------------------------------------------- */
 let refreshScrollReveal = null;
 
 function initScrollReveal() {
@@ -518,9 +386,7 @@ function initScrollReveal() {
 
   const hero = document.querySelector(".reveal--hero");
   if (hero && !prefersReduced) {
-    requestAnimationFrame(() => {
-      setTimeout(() => hero.classList.add("is-visible"), 80);
-    });
+    requestAnimationFrame(() => setTimeout(() => hero.classList.add("is-visible"), 80));
   } else if (hero) {
     hero.classList.add("is-visible");
   }

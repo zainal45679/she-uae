@@ -2496,3 +2496,12 @@ textarea {
     gap: 1.25rem;
   }
 }
+
+/* --- CUSTOM DESKTOP HEADING SIZE --- */
+@media (min-width: 768px) {
+  #what-we-do-heading {
+    /* Fixed the clamp math: MIN is 2.6rem, MAX is 3.1rem */
+    font-size: clamp(2.6rem, 3.5vw, 3.1rem) !important;
+  }
+}
+
